@@ -12,19 +12,31 @@
    --col_yellow_a: hsla(39, 100%, 56%, 0.05);
    --col_teal_a: hsla(166, 100%, 37%, 0.05);
    --col_blue_a: hsla(234, 85%, 45%, 0.05);
-   --panel-top-gutter: 1.8em;
+   --panel-top-gutter: 2.4rem;
    --panel-hdr-weight: 500;
    --panel-bg-grad: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%))
 }
 
-html, body {
-	font-size: 18px;
+html {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   min-height: 512px;
 	height: 100%;
 	width: 100%;
-}
+   font-size: 18px;
+ }
 
+ *, *:before, *:after {
+   -webkit-box-sizing: inherit;
+   -moz-box-sizing: inherit;
+   box-sizing: inherit;
+ }
+ 
 body {
-	background-color: var(--col_lavender);
+	height: 100%;
+	width: 100%;
+   background-color: var(--col_lavender);
 	font-family: 'Hanken Grotesk', Arial, Helvetica,sans-serif;
    font-weight: 400;
 	font-size: 100%;
@@ -48,14 +60,14 @@ main {
 #results-panel .summary {
    min-width: 368px;
    background-image: var(--panel-bg-grad);
-   border-radius: 0 0 2em 2em;
+   border-radius: 0 0 2rem 2rem;
    color: var(--col_lavender);
 }
 
 .summary h1 {
-   font-size: 1.35em;
+   font-size: 1.35rem;
    font-weight: var(--panel-hdr-weight);
-   margin-bottom: 1.8em;
+   margin-bottom: 2.2rem;
 }
 
 .summary .score-box {
@@ -63,12 +75,12 @@ main {
    width: 140px;
    height: 140px;
    border-radius: 50%;
-   margin: 0 auto 2em;
+   margin: 0 auto 1.6rem;
    background-image: linear-gradient(hsla(256, 72%, 46%, 1),  hsla(241, 72%, 46%, 0));
 }
 
 .summary .score-box .score-value {
-   font-size: 4em;
+   font-size: 4rem;
    color: var(--col_white);
    font-weight: 800;
    top: 25px;
@@ -77,21 +89,21 @@ main {
 }
 
 .summary .score-box .score-max {
-   font-size: 1em;
+   font-size: 1rem;
    position: relative;
    top: 50px;
    right: 42px;
 }
 
 .summary .score-grade {
-   font-size: 1.75em;
+   font-size: 1.75rem;
    font-weight: 500;
    color: var(--col_white);
-   margin-bottom: 1.3em;
+   margin-bottom: 1.1rem;
 }
 
 .summary .score-rank {
-   padding: 0 1em;
+   padding: 0 1rem;
 }
 
 #results-panel .details {
@@ -100,20 +112,24 @@ main {
    text-align: left;
 }
 
-#results-panel .summary div, #results-panel .details div {
-   padding: var(--panel-top-gutter) 2em;
+#results-panel .summary div {
+   padding: var(--panel-top-gutter) 2.2rem;
+}
+
+#results-panel .details div {
+   padding: var(--panel-top-gutter) 1.7rem;
 }
 
 #results-panel .details h2 {
-   font-size: 1.35em;
-   margin-bottom: 1.7em;
+   font-size: 1.35rem;
+   margin-bottom: 2.3rem;
    font-weight: var(--panel-hdr-weight);
 }
 
 #results-panel .details p {
-   padding: 1em;
-   border-radius: 0.5em;
-   margin-bottom: 1.25em;
+   padding: 0.9rem;
+   border-radius: 0.5rem;
+   margin-bottom: 1.1rem;
 }
 
 #results-panel .details p span {
@@ -122,19 +138,19 @@ main {
 }
 
 #results-panel .details p .category {
-   width: 39vw;
+   width: 9.3rem;
    text-align: left;
-   margin-left: 1.7em;
+   margin-left: 1.7rem;
 }
 
 #results-panel .details p .value {
-   width: 8vw;
+   width: 1.4rem;
    text-align: center;
    color: var(--col_black);
 }
 
 #results-panel .details p .score.max {
-   width: 12vw;
+   width: 2.5rem;
    color: hsla(0, 0%, 0%, 0.35)
 }
 
@@ -160,13 +176,13 @@ main {
 
 button {
    background-color: var(--col_gray);
-   border-radius: 2em;
+   border-radius: 2rem;
    color: var(--col_white);
    border: none;
    width: 100%;
-   margin-top: 1em;
-   padding: 0.9em;
-   font-size: 1em;
+   margin-top: 1.4rem;
+   padding: 0.9rem;
+   font-size: 1rem;
 }
 
 button:hover {
@@ -176,11 +192,11 @@ button:hover {
 
 footer {
    width: 100%;
-   margin-top: 3vh;
+   margin-top: 2vh;
 }
 
 footer .attribution {
-   font-size: 0.65em;
+   font-size: 0.7rem;
    text-align: center;
 }
 
@@ -194,19 +210,19 @@ footer .attribution a {
    }
 
    footer {
-      margin-bottom: 0.5vh;
+      margin-top: 2vh;
    }
    
    #results-panel {
       width: 736px;
       height: 512px;
       flex-direction: row;
-      border-radius: 2em;
+      border-radius: 2rem;
    }
 
    #results-panel .summary {
       height: 100%;
-      border-radius: 2em;
+      border-radius: 2rem;
    }
 
    #results-panel .summary .score-box {
@@ -224,15 +240,19 @@ footer .attribution a {
       right: 44px;      
    }
 
+   #results-panel .summary div, #results-panel .details div {
+      padding: var(--panel-top-gutter) 2.2rem;
+   }
+
    #results-panel .details p .category {
-      width: 11vw;
+      width: 8.2rem;
    }
 
    #results-panel .details p .value {
-      width: 3vw;
+      width: 1.4rem;
    }
    
    #results-panel .details p .score.max {
-      width: 5vw;
+      width: 2.6rem;
    }
 }
