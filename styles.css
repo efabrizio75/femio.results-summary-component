@@ -1,0 +1,189 @@
+:root {
+	--col_red: hsl(0, 100%, 67%);
+	--col_yellow: hsl(39, 100%, 56%);
+	--col_teal: hsl(166, 100%, 37%);
+	--col_blue: hsl(234, 85%, 45%);
+   --col_white: hsl(0, 0%, 100%);
+   --col_black: hsl(0, 0%, 0%);
+   --col_pale: hsl(221, 100%, 96%);
+   --col_lavender: hsl(241, 100%, 89%);
+   --col_gray: hsl(224, 30%, 27%);
+   --col_red_a: hsla(0, 100%, 67%, 0.05);
+   --col_yellow_a: hsla(39, 100%, 56%, 0.05);
+   --col_teal_a: hsla(166, 100%, 37%, 0.05);
+   --col_blue_a: hsla(234, 85%, 45%, 0.05);
+   --panel-top-gutter: 1.8em;
+   --panel-hdr-weight: 500;
+   --panel-bg-grad: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%))
+}
+
+@media only screen and (min-width: 400px) {
+	
+}
+
+html, body {
+	font-size: 18px;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: var(--col_lavender);
+	font-family: 'Hanken Grotesk', Arial, Helvetica,sans-serif;
+   font-weight: 400;
+	font-size: 100%;
+	text-align: center;
+}
+
+main {
+	align-items: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+#results-panel {
+   display: flex;
+   flex-direction: row;
+   width: 736px;
+   height: 512px;
+   margin: 0 auto;
+	background-color: var(--col_white);
+	border-radius: 2em;
+}
+
+#results-panel .summary {
+   min-width: 368px;
+   height: 100%;
+   background-image: var(--panel-bg-grad);
+   border-radius: 2em;
+   color: var(--col_lavender);
+}
+
+#results-panel .summary h1 {
+   font-size: 1.35em;
+   font-weight: var(--panel-hdr-weight);
+   margin-bottom: 1.8em;
+}
+
+#results-panel .summary .score-box {
+   position: relative;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   margin: 0 auto 2em;
+   background-image: linear-gradient(hsla(256, 72%, 46%, 1),  hsla(241, 72%, 46%, 0));
+}
+
+.summary .score-box .score-value {
+   font-size: 4em;
+   color: var(--col_white);
+   font-weight: 800;
+   top: 60px;
+   left: 30px;
+   position: relative;
+}
+
+.summary .score-box .score-max {
+   font-size: 1em;
+   position: relative;
+   top: 90px;
+   right: 44px;
+}
+
+.summary .score-grade {
+   font-size: 1.75em;
+   font-weight: 500;
+   color: var(--col_white);
+   margin-bottom: 1.3em;
+}
+
+.summary .score-rank {
+   padding: 0 1em;
+}
+
+#results-panel .details {
+   width: 100%;
+   height: 100%;
+   text-align: left;
+}
+
+#results-panel .summary div, #results-panel .details div {
+   padding: var(--panel-top-gutter) 2.2em;
+}
+
+#results-panel .details h2 {
+   font-size: 1.35em;
+   margin-bottom: 1.7em;
+   font-weight: var(--panel-hdr-weight);
+}
+
+#results-panel .details p {
+   padding: 1em;
+   border-radius: 0.5em;
+   margin-bottom: 1.25em;
+}
+
+#results-panel .details p span {
+   display: inline-block;
+   text-align: right;
+}
+
+#results-panel .details p .category {
+   width: 56%;
+   text-align: left;
+   margin-left: 1.7em;
+}
+
+#results-panel .details p .score.max {
+   color: hsla(0, 0%, 0%, 0.35)
+}
+
+#results-panel .details p .value {
+   width: 15%;
+   text-align: center;
+   color: var(--col_black);
+}
+
+#results-panel .details .reaction {
+   background: var(--col_red_a) url("./assets/images/icon-reaction.svg") no-repeat 1em center;
+   color: var(--col_red);
+}
+
+#results-panel .details .memory {
+   background: var(--col_yellow_a) url("./assets/images/icon-memory.svg") no-repeat 1em center;
+   color: var(--col_yellow);
+}
+
+#results-panel .details .verbal {
+   background: var(--col_teal_a) url("./assets/images/icon-verbal.svg") no-repeat 1em center;
+   color: var(--col_teal);
+}
+
+#results-panel .details .visual {
+   background: var(--col_blue_a) url("./assets/images/icon-visual.svg") no-repeat 1em center;
+   color: var(--col_blue);
+}
+
+button {
+   background-color: var(--col_gray);
+   border-radius: 2em;
+   color: var(--col_white);
+   border: none;
+   width: 100%;
+   margin-top: 1em;
+   padding: 0.9em;
+   font-size: 1em;
+}
+
+button:hover {
+   background-image: var(--panel-bg-grad);
+   cursor: pointer;
+}
+
+footer {
+	margin-bottom: 5vh;
+}
+
+footer .attribution { font-size: 0.65em; text-align: center; }
+footer .attribution a { color: hsl(228, 45%, 44%); }
