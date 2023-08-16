@@ -227,7 +227,7 @@ footer .attribution a {
    }
 
    #results-panel .details p .category {
-      width: 15vw;
+      width: 12vw;
    }
 
    #results-panel .details p .value {
@@ -235,6 +235,6 @@ footer .attribution a {
    }
    
    #results-panel .details p .score.max {
-      width: 5vw;
+      width: 4vw;
    }
 }
