@@ -1,10 +1,10 @@
-# Frontend Mentor - QR code component solution
+# Frontend Mentor - Results summary component solution
 
 This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV/hub).
 
 ## Table of contents
 
-- [Frontend Mentor - QR code component solution](#frontend-mentor---qr-code-component-solution)
+- [Frontend Mentor - Results summary component solution](#frontend-mentor---results-summary-component-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [Solution Screenshot](#solution-screenshot)
@@ -13,6 +13,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
     - [Built with](#built-with)
     - [Layout](#layout)
     - [What I learned](#what-i-learned)
+    - [Questions](#questions)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
@@ -28,7 +29,7 @@ In the source code you will find what I consider the bare minimum markup and sty
 
 Sandboxes with the solution are available at the following links:
 
-- View it on Repl.it: [Live solution]()
+- View it on Repl.it: [Live solution](https://femioresults-summary-component.emanuelef75.repl.co)
 - View it on Codepen: [Live solution]()
 
 ## My process
@@ -43,7 +44,7 @@ Sandboxes with the solution are available at the following links:
 
 ### Layout
 
-The basic layout in which the QR code is rendered follows this markup:
+The basic layout in which the Results summary component code is rendered follows this markup:
 
 ```html
 <div id="results-panel">
@@ -63,6 +64,12 @@ The basic layout in which the QR code is rendered follows this markup:
 
 I learned how to use line-height property to vertically center text (no line breaks) within a container by setting its value equal to that of the height property in the same container.
 I learned the correspondence between rgb() --> rgba() and hsl() --> hsla().
+
+### Questions
+
+1. In the Summary pane, what is the most reliable way to make each one of the values in the category stay without wrapping even while the user resizes the viewport?
+2. Why does the footer appear in the middle of the page when the viewport is less than 400px?
+3. What's another approach to display the results in the "circle gradient"?
 
 ## Author
 
