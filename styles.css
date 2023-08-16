@@ -47,7 +47,7 @@ main {
 	align-items: flex-start;
 	display: flex;
 	width: 100%;
-	height: 100%;
+   min-height: 100vh; /* necessary for vertically centering the content */
 }
 
 #results-panel {
@@ -185,14 +185,13 @@ button {
    font-size: 1rem;
 }
 
-button:hover {
+button:active {
    background-image: var(--panel-bg-grad);
    cursor: pointer;
 }
 
 footer {
-   width: 100%;
-   margin-top: 2vh;
+   margin: 2vh auto;
 }
 
 footer .attribution {
@@ -201,16 +200,13 @@ footer .attribution {
 }
 
 footer .attribution a {
-   color: hsl(228, 45%, 44%);
+   color: hsl(228, 95%, 25%);
 }
 
 @media only screen and (min-width: 736px) {
    main {
       align-items: center;
-   }
-
-   footer {
-      margin-top: 2vh;
+      justify-content: center;
    }
    
    #results-panel {
