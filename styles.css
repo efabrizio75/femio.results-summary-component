@@ -101,7 +101,7 @@ main {
 }
 
 #results-panel .summary div, #results-panel .details div {
-   padding: var(--panel-top-gutter) 2.2em;
+   padding: var(--panel-top-gutter) 2em;
 }
 
 #results-panel .details h2 {
@@ -176,8 +176,6 @@ button:hover {
 
 footer {
    width: 100%;
-   bottom: 0.5vh;
-   text-align: center;
    margin-top: 3vh;
 }
 
@@ -190,7 +188,7 @@ footer .attribution a {
    color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 736px) {
    main {
       align-items: center;
    }
